@@ -1,0 +1,10 @@
+name: PlayersInfo
+version: '${version}'
+main: cz.bakterio.playersinfo.PlayersInfo
+api-version: 1.17
+authors: [ Bakterio ]
+description: Shows info of players via gui.
+commands:
+  players:
+    usage: /<commands>
+    description: Shows players info via gui menu.
