@@ -68,6 +68,22 @@ public class GUI {
         ItemStack player = newItem(Material.PLAYER_HEAD, "Player: " + ChatColor.RED + infoPlayer.getDisplayName());
         inv.setItem(2, player);
 
+
+        ArrayList<String> infoLore = new ArrayList<>();
+        infoLore.add("Made by " + ChatColor.RED  + ChatColor.BOLD + "Bakterio" + ChatColor.RESET);
+        infoLore.add("Please report bugs on " + ChatColor.BOLD + "GitHub:");
+        infoLore.add("https://github.com/Bakterio/PlayersInfo");
+
+        ItemStack info = newItem(Material.KELP, ChatColor.AQUA + "Authors",  infoLore);
+        inv.setItem(8, info);
+
+        ItemStack port1 = newItem(Material.MAGENTA_GLAZED_TERRACOTTA, "Teleport " + ChatColor.ITALIC + infoPlayer.getDisplayName() +
+                ChatColor.RESET + " to " + ChatColor.ITALIC + "you");
+        ItemStack port2 = newItem(Material.LIGHT_BLUE_GLAZED_TERRACOTTA, "Teleport " + ChatColor.ITALIC + "you" +
+                ChatColor.RESET + " to " + ChatColor.ITALIC + infoPlayer.getDisplayName());
+
+        inv.setItem(52, port1);
+        inv.setItem(53, port2);
         return inv;
     }
 
@@ -88,6 +104,17 @@ public class GUI {
         ArrayList<String> l = new ArrayList<>();
         l.add(lore);
         itemMeta.setLore(l);
+        item.setItemMeta(itemMeta);
+
+        return item;
+    }
+
+    private static ItemStack newItem(Material material, String name, ArrayList<String> lore) {
+        ItemStack item = new ItemStack(material);
+        ItemMeta itemMeta = item.getItemMeta();
+        itemMeta.setDisplayName(name);
+
+        itemMeta.setLore(lore);
         item.setItemMeta(itemMeta);
 
         return item;
