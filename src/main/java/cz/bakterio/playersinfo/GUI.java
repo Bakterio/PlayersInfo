@@ -52,7 +52,7 @@ public class GUI {
             index += 9;
         }
 
-        ItemStack health = newItem(Material.REDSTONE_WIRE, "Health: " + ChatColor.RED + infoPlayer.getHealth());
+        ItemStack health = newItem(Material.REDSTONE_BLOCK, "Health: " + ChatColor.RED + infoPlayer.getHealth());
         ItemStack level = newItem(Material.EXPERIENCE_BOTTLE, "Level: " + ChatColor.AQUA + infoPlayer.getLevel(),
                 "Ex: " + ChatColor.AQUA + infoPlayer.getExp() + ChatColor.RESET);
         ItemStack world = newItem(Material.GRASS_BLOCK, "World: " + ChatColor.GREEN + infoPlayer.getWorld().getName());
@@ -77,10 +77,10 @@ public class GUI {
         ItemStack info = newItem(Material.KELP, ChatColor.AQUA + "Authors",  infoLore);
         inv.setItem(8, info);
 
-        ItemStack port1 = newItem(Material.MAGENTA_GLAZED_TERRACOTTA, "Teleport " + ChatColor.ITALIC + infoPlayer.getDisplayName() +
-                ChatColor.RESET + " to " + ChatColor.ITALIC + "you");
-        ItemStack port2 = newItem(Material.LIGHT_BLUE_GLAZED_TERRACOTTA, "Teleport " + ChatColor.ITALIC + "you" +
-                ChatColor.RESET + " to " + ChatColor.ITALIC + infoPlayer.getDisplayName());
+        ItemStack port1 = newItem(Material.MAGENTA_GLAZED_TERRACOTTA, "Teleport " + ChatColor.YELLOW + infoPlayer.getDisplayName() +
+                ChatColor.RESET + " to " + ChatColor.YELLOW + "you");
+        ItemStack port2 = newItem(Material.LIGHT_BLUE_GLAZED_TERRACOTTA, "Teleport " + ChatColor.YELLOW + "you" +
+                ChatColor.RESET + " to " + ChatColor.YELLOW + infoPlayer.getDisplayName());
 
         inv.setItem(52, port1);
         inv.setItem(53, port2);
